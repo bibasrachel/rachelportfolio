@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--diri sa <head> nag gamit kog utf-8 nga encoding system, nindot pod ni gamiton kay para maka less ug memory usage maskin daghan 
+ang supported nga characters niya.
+nag meta viewport pod ko para sa ang site mo adjust sa screen sa users.
+gi link pod nako diri ang bootstrap css ug local css and boxincon para sa mga icon nga gamiton ani nga site.-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/contactmestyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Contact Me</title>
+</head>
+
+<body>
+
+    <!--div that contains navigation bar. Akoa gi pa float ang <h3> para mag pundo sa left side kay para murag icon pod siya.
+        then gi justify-contentcenter nako ang whole nav para sa middle mag position.-->
+    <div>
+        <div>
+            <h3 class="float-md-start mb-0 text-dark">P O R T F O L I O</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link fw-bold py-1 px-0" href="index.html">Home</a>
+                <a class="nav-link fw-bold py-1 px-0" href="resume.html">Resume</a>
+                <a class="nav-link fw-bold py-1 px-0" href="myprojects.html">Projects</a>
+                <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="contactme.html">Contact Me</a>
+                <a class="nav-link fw-bold py-1 px-0" href="location.html">Location</a>
+            </nav>
+        </div>
+
+    </div>
+
+    <!--Main content ni diri ani nga page.
+    sulod sa <div> nako gi butang ang <form>, then gi link nako ang .php file nga pares aning contactme page.
+    kini nga page inig mag click kog button nga naka set as submit, then mo dritso na siya tawag sa .php nga akong gi link.
+    Now nag run na ang code sa php, kuhaon na ni php ang mga gi input sa user diri nga page,
+    then ebutang ni php sa database table corresponding sa kung unsa naka set didto sa code sa php.-->
+    <main>
+    <div class="container text-center">
+        <h1>Contact Me</h1>
+        <form action="php/contactform.php" method="post" class="mx-auto">
+            <div class="form-grid row mt-5">
+                <div class="col-6">
+                    <label for="exampleFormControlTextarea1">Name: </label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid Name.
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="exampleFormControlTextarea1">E-mail: </label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="col-14 mt-5 form-group">
+                <label for="exampleFormControlTextarea1">Message: </label>
+                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Your message here..."></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" name="submit" value="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    </main>
+
+    <!--Footer Area-->
+    <footer class="py-3 my-4 mb-auto"><!-- fixed-bottom-->
+        <div class="text-center">
+            <li class="nav-item mb-2 bx bxl-github"><a href="" class="text-decoration-none text-reset">
+                    Github</a></li>
+            <li class="nav-item mb-2 bx bxl-twitter"><a href="https://twitter.com/yfkb00gbxk"
+                    class="text-decoration-none text-reset"> Twitter</a></li>
+            <li class="nav-item mb-2 bx bx-mail-send"><a href="https://mail.google.com/mail/u/0/#inbox"
+                    class="text-decoration-none text-reset"> E-mail</a></li>
+            <li class="nav-item mb-2 bx bxl-facebook-circle"><a href="" class="text-decoration-none text-reset">
+                    Facebook</a></li>
+            <li class="nav-item mb-2 bx bxl-youtube"><a href="" class="text-decoration-none text-reset">
+                    Youtube</a></li>
+        </div>
+        <br>
+        <br>
+        <p class="text-center text-body-secondary">&copy; 2024 DKT Pagadian Office</p>
+    </footer>
+
+
+    <!--Importing bootstrap javascript-->
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
